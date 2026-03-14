@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azizullah Samejo - Full Stack MERN Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Azizullah Samejo</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Hello, I'm</h2>
+            <h1>Azizullah Samejo</h1>
+            <h3>Full Stack MERN Developer</h3>
+            <p>Passionate about creating robust and scalable web applications using the MERN stack.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-pic">
+                <img src="aziz.jpeg" alt="Azizulla Samejo">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a dedicated Full Stack Developer specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js). With a passion for clean code and innovative solutions, I create web applications that are both functional and user-friendly.</p>
+                    <p>My journey in web development has equipped me with skills in front-end and back-end technologies, allowing me to build complete, end-to-end solutions.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h4>2+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h4>10+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Technologies Mastered</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="code-snippet">
+                        <pre>
+                            <code>const dev = {
+  name: 'Azizullah Samejo',
+  role: 'Full Stack MERN Developer',
+  skills: ['React', 'Node.js', 'Express', 'MongoDB', 'TypeScript', 'GraphQL'],
+  github: 'https://github.com/azizullah',
+  contact: {
+    email: 'azizthari60@gmail.com',
+    linkedIn: 'https://linkedin.com/in/azizullah'
+  },
+  buildProject: async (title) => {
+    console.log(`🚀 Building ${title}...`);
+    const response = await fetch(`/api/projects?name=${encodeURIComponent(title)}`);
+    return response.json();
+  },
+  getSummary() {
+    return `${this.name} is a ${this.role} who builds scalable full-stack apps using the MERN stack.`;
+  }
+};
+
+console.log(dev.getSummary());
+</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React.js</h3>
+                    <p>Building dynamic and interactive user interfaces with modern React hooks and state management.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                    <p>Developing scalable server-side applications and RESTful APIs with Express.js.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>MongoDB</h3>
+                    <p>Designing and managing NoSQL databases for efficient data storage and retrieval.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js-square"></i>
+                    <h3>JavaScript</h3>
+                    <p>Mastering ES6+ features for both client-side and server-side development.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5 & CSS3</h3>
+                    <p>Creating responsive and accessible web layouts with modern CSS techniques.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git & GitHub</h3>
+                    <p>Version control and collaborative development with Git workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>Full-stack MERN application with user authentication, product management, and payment integration.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Express</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn small">Live Demo</a>
+                        <a href="#" class="btn small secondary">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Task Management App</h3>
+                    <p>Collaborative task management tool with real-time updates and team collaboration features.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Socket.io</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn small">Live Demo</a>
+                        <a href="#" class="btn small secondary">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <h3>Blog Platform</h3>
+                    <p>Content management system with rich text editing, user roles, and SEO optimization.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Express</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn small">Live Demo</a>
+                        <a href="#" class="btn small secondary">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always open to discussing new opportunities and interesting projects. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:azizthari60@gmail.com">azizthari60@gmail.com</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span><a href="tel:+923420032860">+92 (342) 0032860</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Umerkot, Sindh, Pakistan</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/aziz-samejo-0674912a0?" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/azizthari1" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.whatsapp.com/azizsamejo" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Azizullah Samejo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
