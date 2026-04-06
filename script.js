@@ -69,25 +69,40 @@ document.querySelectorAll('.skill-card, .project-card, .about-content, .contact-
 
 // Contact form submission
 const contactForm = document.querySelector('.contact-form');
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     // Get form data
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
-    
+
     // Simple validation
     if (!data.name || !data.email || !data.subject || !data.message) {
         alert('Please fill in all fields.');
         return;
     }
-    
-    // Here you would typically send the data to a server
-    // For now, just show a success message
-    alert('Thank you for your message! I will get back to you soon.');
-    
-    // Reset form
-    contactForm.reset();
+
+    try {
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.message || 'Something went wrong.');
+        }
+
+        alert(result.message);
+        contactForm.reset();
+    } catch (error) {
+        console.error(error);
+        alert('Unable to send message at this time. Please try again later.');
+    }
 });
 
 // Typing effect for hero text
